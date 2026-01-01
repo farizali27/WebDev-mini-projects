@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/video.css" />
+    <link rel="stylesheet" href="./styles/sidebar.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Youtube Clone</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img
+          class="hamburger-menu"
+          src="./icons/hamburger-menu.svg"
+          alt="Menu"
+        />
+        <img
+          class="youtube-logo"
+          src="./icons/youtube-logo.svg"
+          alt="Youtube"
+        />
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search" />
+
+        <button class="search-button">
+          <img class="search-icon" src="./icons/search.svg" alt="Search" />
+          <span class="tooltip">Search</span>
+        </button>
+
+        <button class="voice-search-button">
+          <img
+            class="voice-search-icon"
+            src="./icons/voice-search-icon.svg"
+            alt="Voice Search"
+          />
+          <span class="tooltip">Search with your voice</span>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg" />
+          <span class="tooltip">Create</span>
+        </div>
+
+        <div class="youtube-apps-icon-container">
+          <img
+            class="youtube-apps-icon"
+            src="icons/youtube-apps.svg"
+            alt="Apps"
+          />
+          <span class="tooltip">YouTube apps</span>
+        </div>
+
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg" />
+          <span class="notifications-count">3</span>
+          <span class="tooltip">Notifications</span>
+        </div>
+
+        <img
+          class="current-user-picture"
+          src="./channel-pictures/pfp.jpg"
+          alt="Your profile"
+        />
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <img src="./icons/home.svg" />
+        <span>Home</span>
+      </div>
+      <div class="sidebar-link">
+        <img src="./icons/explore.svg" />
+        <span>Explore</span>
+      </div>
+      <div class="sidebar-link">
+        <img src="./icons/subscriptions.svg" />
+        <span>Subscriptions</span>
+      </div>
+      <div class="sidebar-link">
+        <img src="./icons/originals.svg" />
+        <span>Originals</span>
+      </div>
+      <div class="sidebar-link">
+        <img src="./icons/youtube-music.svg" />
+        <span>YouTube Music</span>
+      </div>
+      <div class="sidebar-link">
+        <img src="./icons/library.svg" />
+        <span>Library</span>
+      </div>
+    </nav>
+
+    <main>
+      <section class="video-grid">
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=XFDM1ip5HdU"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th1.webp" />
+            </a>
+            <div class="video-time">15:07</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@3blue1brown" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch1.jpg" />
+              </a>
+            </div>
+
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=XFDM1ip5HdU"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  What does it feel like to invent math?
+                </p>
+              </a>
+              <p class="channel-name">3Blue1Brown</p>
+              <p class="video-stats">4.4M views &#183; 10 years ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=_QiPISsBo5M"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th2.webp" />
+            </a>
+            <div class="video-time">24:17</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a
+                href="https://www.youtube.com/@KingsandGenerals"
+                target="_blank"
+              >
+                <img class="profile-picture" src="./channel-pictures/ch2.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=_QiPISsBo5M"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  Mongol Invasions - Mamluk-Ilkhanate Wars DOCUMENTARY
+                </p>
+              </a>
+              <p class="channel-name">Kings and Generals</p>
+              <p class="video-stats">944k views &#183; 5 years ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=wpgjpehp8sc"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th3.webp" />
+            </a>
+            <div class="video-time">14:22</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@NORTH02" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch3.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=wpgjpehp8sc"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  Every Other Species of Humans We Encountered
+                </p>
+              </a>
+              <p class="channel-name">NORTH 02</p>
+              <p class="video-stats">877k views &#183; 7 months ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=OWbtxdq5rvQ"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th4.webp" />
+            </a>
+            <div class="video-time">0:52</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a
+                href="https://www.youtube.com/@KevinKerryBoyce"
+                target="_blank"
+              >
+                <img class="profile-picture" src="./channel-pictures/ch4.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=OWbtxdq5rvQ"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">Two-Week Old Kitten Lets Out A Roar</p>
+              </a>
+              <p class="channel-name">Kevin Kerry Boyce</p>
+              <p class="video-stats">9.3M views &#183; 10 years ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=vA9dfINW4Rg"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th5.webp" />
+            </a>
+            <div class="video-time">16:35</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@mitocw" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch5.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=vA9dfINW4Rg"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">Fourier Series</p>
+              </a>
+              <p class="channel-name">MIT OpenCourseWare</p>
+              <p class="video-stats">550k views views &#183; 9 years ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=PZ_ebxkNZmo"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th6.webp" />
+            </a>
+            <div class="video-time">33:49</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@WIRED" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch6.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=PZ_ebxkNZmo"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  Professor Answers Coding Questions | Tech Support | WIRED
+                </p>
+              </a>
+              <p class="channel-name">WIRED</p>
+              <p class="video-stats">608k views &#183; 4 days ago</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=ppplk5I7tWo&t=5s"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th7.webp" />
+            </a>
+            <div class="video-time">6:23</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@bigboxSWE" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch7.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=ppplk5I7tWo&t=5s"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">Timeless Programming Principles</p>
+              </a>
+              <p class="channel-name">bigboxSWE</p>
+              <p class="video-stats">6.9k views &#183; 3 hours ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=wgPymD-NBQU"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th8.webp" />
+            </a>
+            <div class="video-time">5:58</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@TEDEd" target="_blank">
+                <img class="profile-picture" src="./channel-pictures/ch8.jpg" />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=wgPymD-NBQU"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  The great conspiracy against Julius Caesar - Kathryn Tempest
+                </p>
+              </a>
+              <p class="channel-name">TED-Ed</p>
+              <p class="video-stats">9.6M views &#183; 10 years ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=qpRGnTTcLpo"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th9.webp" />
+            </a>
+            <div class="video-time">16:05</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@JeffNippard" target="_blank">
+                <img
+                  class="profile-picture"
+                  src="./channel-pictures/ch9.jpg"
+                />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=qpRGnTTcLpo"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  7 Amazing Exercises No One Does (ALL S TIER)
+                </p>
+              </a>
+              <p class="channel-name">Jeff Nippard</p>
+              <p class="video-stats">3.7M views &#183; 2 months ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=oeEWAhUEr8s"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th10.webp" />
+            </a>
+            <div class="video-time">3:46</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@cartooncomedy8402" target="_blank">
+                <img
+                  class="profile-picture"
+                  src="./channel-pictures/ch10.jpg"
+                />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=oeEWAhUEr8s"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  Family Guy- Meg Comes Out of Jail and Beats Everyone
+                </p>
+              </a>
+              <p class="channel-name">Cartoon Comedy</p>
+              <p class="video-stats">28M views &#183; 7 years ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=42iQKuQodW4"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th11.webp" />
+            </a>
+            <div class="video-time">2:52</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@Fireship" target="_blank">
+                <img
+                  class="profile-picture"
+                  src="./channel-pictures/ch11.jpg"
+                />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=42iQKuQodW4"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  Linux Directories Explained in 100 Seconds
+                </p>
+              </a>
+              <p class="channel-name">Fireship</p>
+              <p class="video-stats">1.7M views &#183; 4 years ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="video-preview">
+          <div class="thumbnail-div">
+            <a
+              href="https://www.youtube.com/watch?v=KZeIEiBrT_w"
+              target="_blank"
+              class="video-title-link"
+            >
+              <img class="thumbnail" src="./thumbnails/th13.webp" />
+            </a>
+            <div class="video-time">32:31</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <a href="https://www.youtube.com/@veritasium" target="_blank">
+                <img
+                  class="profile-picture"
+                  src="./channel-pictures/ch12.jpg"
+                />
+              </a>
+            </div>
+            <div class="video-info">
+              <a
+                href="https://www.youtube.com/watch?v=KZeIEiBrT_w"
+                target="_blank"
+                class="video-title-link"
+              >
+                <p class="video-title">
+                  The Strange Math That Predicts (Almost) Anything
+                </p>
+              </a>
+              <p class="channel-name">Veritasium</p>
+              <p class="video-stats">10M views &#183; 4 months ago</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
