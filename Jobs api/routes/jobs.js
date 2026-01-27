@@ -7,9 +7,6 @@ const {
   updateJob,
   deleteJob,
 } = require("../controllers/jobs");
-const authenticationMiddleware = require("../middleware/authentication");
-
-router.use(authenticationMiddleware)
 
 router.route('/').post(createJob).get(getAllJobs)
 router.route('/:id').get(getJob).patch(updateJob).delete(deleteJob)

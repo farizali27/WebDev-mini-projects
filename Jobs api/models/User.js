@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const mongoose = require("mongoose");
 
 const UserSchema = mongoose.Schema({
@@ -22,7 +23,7 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: [true, "Please provide password"],
-    minlength: [8, "Password must be atleast 8 characters"],
+    minlength: [6, "Password must be atleast 6 characters"],
     maxlength: 64,
     validate: {
       validator: function (value) {
@@ -34,6 +35,18 @@ const UserSchema = mongoose.Schema({
         "Password must contain at least 1 uppercase, 1 lowercase, 1 number, and 1 special character",
     }
   }
-});
+})
+
+UserSchema.methods.createJWT = function() {
+  return jwt.sign(
+    {userId: this._id, name: this.name},
+    process.env.JWT_SECRET,
+    {expiresIn: process.env.JWT_LIFETIME}
+  )
+}
+
+UserSchema.methods.comparePassword = function(enteredPassword) {
+  return enteredPassword === this.password
+}
 
 module.exports = mongoose.model('User',UserSchema)
