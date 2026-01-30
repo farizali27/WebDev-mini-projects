@@ -1,3 +1,4 @@
+require('express-async-errors');
 require('dotenv').config();
 const connectDB = require('./db/connect');
 const errorHandlerMiddleware = require('./middleware/error-handler');
