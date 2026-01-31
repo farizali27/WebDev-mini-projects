@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mongoose = require("mongoose");
 
@@ -23,18 +24,15 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: [true, "Please provide password"],
-    minlength: [6, "Password must be atleast 6 characters"],
-    maxlength: 64,
-    validate: {
-      validator: function (value) {
-        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-          value,
-        );
-      },
-      message:
-        "Password must contain at least 1 uppercase, 1 lowercase, 1 number, and 1 special character",
-    }
+    minlength: [6, "Password must be atleast 6 characters"]
   }
+})
+
+UserSchema.pre('save', async function () {
+  if(!this.isModified('password')) return
+
+  const salt = await bcrypt.genSalt(10)
+  this.password = await bcrypt.hash(this.password, salt)
 })
 
 UserSchema.methods.createJWT = function() {
@@ -45,8 +43,9 @@ UserSchema.methods.createJWT = function() {
   )
 }
 
-UserSchema.methods.comparePassword = function(enteredPassword) {
-  return enteredPassword === this.password
+UserSchema.methods.comparePassword = async function(enteredPassword) {
+  const isMatch = await bcrypt.compare(enteredPassword, this.password)
+  return isMatch
 }
 
 module.exports = mongoose.model('User',UserSchema)
